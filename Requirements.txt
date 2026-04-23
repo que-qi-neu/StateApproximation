@@ -1,0 +1,6 @@
+numpy
+swig
+gymnasium[box2d]
+stable-baselines3
+sb3-contrib
+scikit-learn
