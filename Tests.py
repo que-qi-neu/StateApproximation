@@ -48,6 +48,9 @@ def compareModels(envName:str, model:LightGameModelRt, kwargs):
     testModel = model.getLargeModel()
 
     envDisplay = gym.make(envName, render_mode="human", **kwargs)
+    print('\nProject Model playing...')
+    evaluateModel(testEnv=envDisplay, model=testModel, batch=1, epochCount=3, printStats=False)
+    print('\Benchmark Model playing...')
     evaluateModel(testEnv=envDisplay, model=model, batch=1, epochCount=3, printStats=False)
     envDisplay.close()
 

@@ -22,7 +22,7 @@ class LightGameModelRt(BaseModel):
     applyPCA = False
     pcaTransformer = None
     savedPath = None
-    anchorCount = 1024
+    anchorCount = 512
     stateCount = 0
     def __init__(self, trainData=True):
         pass

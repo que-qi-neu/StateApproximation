@@ -10,9 +10,9 @@ from TestModels import LunarTestModel, BipedalTestModel, HumanoidTestModel, Bipe
 class LunarGameModel(LightGameModelRt):
     def __init__(self, trainData=True):
         super()
-        self.lightModel =  MLPRegressor(hidden_layer_sizes=(32, 32), max_iter=256)
+        self.lightModel =  MLPRegressor(hidden_layer_sizes=(16, 16), max_iter=256)
         self.gymEnv = gym.make("LunarLander-v3", continuous=True)
-        self.modelName = "LightLunarModel"
+        self.modelName = "LightLunarModelTest"
         self.largeModelName = "LargeLunarModel"
         self.pcaTransformer = PCA()
         self.applyPCA = False
@@ -30,9 +30,9 @@ class LunarGameModel(LightGameModelRt):
 class BipedalGameModel(LightGameModelRt):
     def __init__(self, trainData=True):
         super()
-        self.lightModel =  MLPRegressor(hidden_layer_sizes=(48, 48), max_iter=512)
+        self.lightModel =  MLPRegressor(hidden_layer_sizes=(64, 64), max_iter=512)
         self.gymEnv = gym.make("BipedalWalker-v3")
-        self.modelName = "LightBipedalModel"
+        self.modelName = "LightBipedalModelTest"
         self.largeModelName = "LargeBipedalModel"
         self.pcaTransformer = PCA()
         self.applyPCA = True

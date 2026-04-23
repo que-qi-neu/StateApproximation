@@ -10,7 +10,7 @@ from BaseModel import BaseModel
 # model and wait for result. This algorithm will first use a large machine learning to produce a very light
 # machine learning model that handles game micro very well. 
 class AnchorVectors:
-    anchorCounts = 1024
+    anchorCounts = 2048
     anchorVectorsList=[]
     def __init__(self, model:BaseModel, env):
         self.model = model
